@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row padding-5">
+    <div class="col-sm-6">
+      <h4 class="card-title">G - Learn</h4>
+    </div>
+    <div class="col-sm-6 text-right">
+      <ul class="navigation">
+        <li>
+          <a href="#/">Dashboard</a>
+        </li>
+        <li>
+          <a href="#/">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm-12">
+      <h1>Log In</h1>
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h3>Selamat Datang Guru</h3>
+    </div>
+    <div class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <img class="img-fluid img-menu" src="./asset/icon-guru.svg" alt="">
+          <p>Silahkan login untuk memuali !</p>
+        </div>
+        <div class="container">
+          <div class="form-group">
+            <label for="">Username :</label>
+            <input type="text" data-table="guru/akun-guru" name="username" class="form-control" placeholder="exp: gugus" value="">
+          </div>
+          <div class="form-group">
+            <label for="">Password :</label>
+            <input type="password"  data-table="guru/akun-guru" name="password" class="form-control" placeholder="exp: ******************" value="">
+          </div>
+          <div class="form-group">
+            <button type="button" data-login data-key="username" data-auth="password" get-data="guru/akun-guru" class="btn btn-success" name="button">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6  mt-3">
+      <div class="card">
+        <div class="card-body text-center" id="crud">
+          <img class="img-fluid img-menu" src="./asset/icon-guru.svg" alt="">
+          <p>Silahkan daftar dulu jika belum punya akun, dan jadi bagian dari kami :)</p>
+          <a href="#/guru/daftar" type="button" class="btn btn-primary" name="button">Daftar disini</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<section class="footer mt-5 text-dark">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Gugus Darmayanto
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>

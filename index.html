@@ -1,5 +1,68 @@
-<html>
-<body>
-<h1>Hallo</h1>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>glearn</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="./css/select2.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./icon/icon.css">
+		<link rel="stylesheet" href="./css/w3.css">
+		<!-- <link rel="stylesheet" href="./cssPrint/style.css"> -->
+		<style media="screen">
+			td, th{
+				wrap-content: nowrap;
+			}
+		</style>
+	</head>
+	<body class="bg-img-01">
+
+		<div id="main">
+
+		</div>
+
+		<script src="./require.js" charset="utf-8"></script>
+		<script src="./config.js" charset="utf-8"></script>
+		<script type="text/javascript">
+
+			require([
+				'sammy',
+				'page/dashboard',
+				'page/guru/login',
+				'page/guru/daftar',
+				'page/ruangguru',
+				'page/guru/ruangkelas',
+				'page/guru/kelas',
+				'action/click',
+				'action/firebaseAct'
+			], function(sammy, dashboard, login, daftar, ruangguru, ruangkelas, kelas){
+					var app = sammy(function() {
+						// master data release
+						this.get('#/', function() {
+							dashboard.view();
+						});
+						this.get('#/guru/login', function() {
+							login.view();
+						});
+						this.get('#/guru/daftar', function() {
+							daftar.view();
+						});
+						this.get('#/ruang-guru', function() {
+							ruangguru.view();
+						});
+						this.get('#/ruang-guru/ruang-kelas', function() {
+							ruangkelas.view();
+						});
+						this.get('#/ruang-guru/kelas/:kelas', function() {
+							let id = this.params['kelas'];
+                            kelas.view(id);
+						});
+					});
+					app.run("#/");
+			});
+
+		</script>
+
+	</body>
 </html>

@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row padding-5">
+    <div class="col-sm-6">
+      <h4 class="card-title">G - Learn</h4>
+    </div>
+    <div class="col-sm-6 text-right">
+      <ul class="navigation">
+        <li>
+          <a href="#/">Dashboard</a>
+        </li>
+        <li>
+          <a href="#/">Profile</a>
+        </li>
+        <li>
+          <a guru-log-out href="#/">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-sm-6">
+      <h1 id="kelas-title"></h1>
+      <p>Selamat datang dihalaman kelas <span id="kelas-title"></span> ayuk buat materi dan tugas buat siswa anda ! </p>
+    </div>
+    <div class="col-sm-6 text-right">
+      <img width="150px" src="asset/icon-guru.svg" alt="">
+    </div>
+</div>
+
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-sm-12">
+        <a href="#/ruang-guru/ruang-kelas" class="btn btn-default">Kembali</a>
+       <button modal-open modal-target="id01" table-name="guru/kelas/" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        Buat kelas baru
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-3" style="min-height: 300px;">
+  <div class="row" id="syfaul-container">
+
+  </div>
+</div>
+</div>
+<section class="footer mt-5 text-dark">
+  <div class="container">
+    <div class="row">
+      &copy; Copyright by Gugus Darmayanto
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+
+    </div>
+  </div>
+</section>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-blue">
+        <span modal-close
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Tambah Kelas Baru</h2>
+      </header>
+      <div class="w3-container">
+        <div class="form-group">
+          <label for="">Pilih Jenjang</label>
+          <select pilihan-jenjang data-table="guru/akun-guru" name="jenjang" class="form-control">
+            <option value=""> pilih </option>
+            <option selected value="SD"> SD </option>
+            <option value="SMP"> SMP </option>
+            <option value="SMA-K"> SMA/K </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Pilih Kelas</label>
+          <select pilihan-kelas data-table="guru/akun-guru" name="kelas" class="form-control">
+            <option value="pilih"> pilih </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+      </div>
+      <footer class="w3-container w3-blue">
+        <button data-simpan data-key="kelas" action-script="
+          $('body #id01').css('display', 'none');
+          ruangkelas.menu();
+        " get-data="guru/akun-guru" type="button" >Simpan</button>
+      </footer>
+    </div>
+  </div>
+</div>
